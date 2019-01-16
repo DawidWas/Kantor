@@ -20,6 +20,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var hideUserInputsButton: UIBarButtonItem!
     
+    var result: (buy:Float, sell:Float) = (0.0,0.0)
     
     @IBAction func actionHideUserInputsButton(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
@@ -27,12 +28,35 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func actionUserAmountTextField(_ sender: Any) {
+     //   result.buy = Float ( userAmountTextField.text.toInt()! * 3 )
+     //   result.sell = Float ( userAmountTextField.text.toInt()! * 4 )
+        
+        actionUpdateInterface()
+    }
     
+    @IBAction func actionUpdateInterface() {
+        
+        var displayResult: Float = 0.0
+        
+        if (segmentedControl.selectedSegmentIndex == 0){
+            displayResult = result.sell
+        } else{
+            displayResult = result.buy
+        }
+        exchangeLabel.text = "\(displayResult)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userAmountTextField.text = "100"
+        
+        actionUserAmountTextField(userAmountTextField)
+        
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputsButton(_:)))
+        
+        self.view.addGestureRecognizer(tapGest)
     }
     
     
