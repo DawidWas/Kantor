@@ -15,6 +15,7 @@
 		D3D083B021EF4837006AB397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D083AE21EF4837006AB397 /* LaunchScreen.storyboard */; };
 		D3D083BB21EF4837006AB397 /* KantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D083BA21EF4837006AB397 /* KantorTests.swift */; };
 		D3D083C621EF4837006AB397 /* KantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D083C521EF4837006AB397 /* KantorUITests.swift */; };
+		D3D083D921EF7F02006AB397 /* Kantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D083D821EF7F02006AB397 /* Kantor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		D3D083B121EF4837006AB397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3D083B621EF4837006AB397 /* KantorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KantorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D083BA21EF4837006AB397 /* KantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantorTests.swift; sourceTree = "<group>"; };
-		D3D083BC21EF4837006AB397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D083BC21EF4837006AB397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		D3D083C121EF4837006AB397 /* KantorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KantorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D083C521EF4837006AB397 /* KantorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantorUITests.swift; sourceTree = "<group>"; };
 		D3D083C721EF4837006AB397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D083D821EF7F02006AB397 /* Kantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kantor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				D3D083A321EF4836006AB397 /* AppDelegate.swift */,
-				D3D083A521EF4836006AB397 /* ExchangeViewController.swift */,
-				D3D083A721EF4836006AB397 /* AboutViewController.swift */,
-				D3D083A921EF4836006AB397 /* Main.storyboard */,
-				D3D083AC21EF4837006AB397 /* Assets.xcassets */,
-				D3D083AE21EF4837006AB397 /* LaunchScreen.storyboard */,
+				D3D083D521EF7CCF006AB397 /* Assets */,
+				D3D083DA21EF7F0D006AB397 /* Models */,
+				D3D083D321EF7C74006AB397 /* ViewControllers */,
 				D3D083B121EF4837006AB397 /* Info.plist */,
+				D3D083BC21EF4837006AB397 /* Info.plist */,
+				D3D083D421EF7CA4006AB397 /* Interfaces */,
 			);
 			path = Kantor;
 			sourceTree = "<group>";
@@ -114,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				D3D083BA21EF4837006AB397 /* KantorTests.swift */,
-				D3D083BC21EF4837006AB397 /* Info.plist */,
 			);
 			path = KantorTests;
 			sourceTree = "<group>";
@@ -126,6 +127,40 @@
 				D3D083C721EF4837006AB397 /* Info.plist */,
 			);
 			path = KantorUITests;
+			sourceTree = "<group>";
+		};
+		D3D083D321EF7C74006AB397 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3D083A521EF4836006AB397 /* ExchangeViewController.swift */,
+				D3D083A721EF4836006AB397 /* AboutViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D3D083D421EF7CA4006AB397 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D3D083A921EF4836006AB397 /* Main.storyboard */,
+				D3D083AE21EF4837006AB397 /* LaunchScreen.storyboard */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		D3D083D521EF7CCF006AB397 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D3D083AC21EF4837006AB397 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D3D083DA21EF7F0D006AB397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3D083D821EF7F02006AB397 /* Kantor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +296,7 @@
 			files = (
 				D3D083A821EF4836006AB397 /* AboutViewController.swift in Sources */,
 				D3D083A421EF4836006AB397 /* AppDelegate.swift in Sources */,
+				D3D083D921EF7F02006AB397 /* Kantor.swift in Sources */,
 				D3D083A621EF4836006AB397 /* ExchangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

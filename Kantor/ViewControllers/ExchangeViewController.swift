@@ -21,6 +21,25 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var hideUserInputsButton: UIBarButtonItem!
     
     var result: (buy:Float, sell:Float) = (0.0,0.0)
+    var kantor = Kantor()
+    
+    
+//MARK: ViewControler -
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        userAmountTextField.text = "100"
+        
+        actionUserAmountTextField(userAmountTextField)
+        
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputsButton(_:)))
+        
+        self.view.addGestureRecognizer(tapGest)
+    }
+    
+    
+//MARK: metody -
     
     @IBAction func actionHideUserInputsButton(_ sender: Any) {
         userAmountTextField.resignFirstResponder()
@@ -29,8 +48,14 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func actionUserAmountTextField(_ sender: Any) {
-     //   result.buy = Float ( userAmountTextField.text.toInt()! * 3 )
-     //   result.sell = Float ( userAmountTextField.text.toInt()! * 4 )
+  //  userAmountTextField.text = NSString(format: " ", userAmountTextField) as String
+  //     let amount = NSString(format: " ", userAmountTextField) as String
+  //      result = kantor.exchange(amount: amount, currencyCode: "USD")
+        
+        
+//     let amount = Float(userAmountTextField.text.toInt()! )
+//        result = kantor.exchange(amount, currencyCode: "USD")
+        
         
         actionUpdateInterface()
     }
@@ -47,17 +72,6 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         exchangeLabel.text = "\(displayResult)"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        userAmountTextField.text = "100"
-        
-        actionUserAmountTextField(userAmountTextField)
-        
-        let tapGest = UITapGestureRecognizer(target: self, action: #selector(ExchangeViewController.actionHideUserInputsButton(_:)))
-        
-        self.view.addGestureRecognizer(tapGest)
-    }
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
