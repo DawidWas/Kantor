@@ -39,6 +39,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="2pw-lO-q3N"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rt-YR-Agf">
                                 <rect key="frame" x="295" y="137" width="47" height="39"/>
@@ -75,8 +78,19 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="THv-jV-zXo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="M1F-9X-qpy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="M1F-9X-qpy">
+                            <connections>
+                                <action selector="actionHideUserInputsButton:" destination="9pv-A4-QxB" id="UGN-5J-sX4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currencyButton" destination="1Rt-YR-Agf" id="NUb-al-2mS"/>
+                        <outlet property="exchangeLabel" destination="W54-Eg-ReV" id="Jmg-5H-Zwf"/>
+                        <outlet property="hideUserInputsButton" destination="M1F-9X-qpy" id="X3X-42-BMN"/>
+                        <outlet property="segmentedControl" destination="39a-1A-H5d" id="0TL-Le-444"/>
+                        <outlet property="userAmountTextField" destination="qpq-Ut-GRw" id="Ey0-ry-QqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
